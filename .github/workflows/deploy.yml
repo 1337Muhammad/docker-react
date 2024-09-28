@@ -3,7 +3,7 @@ name: Docker CI/CD
 on:
   push:
     branches:
-      - main  # Change this to the branch you want to trigger the deployment from
+      - master  # Change this to the branch you want to trigger the deployment from
 
 jobs:
   build:
