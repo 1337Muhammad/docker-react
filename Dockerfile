@@ -13,6 +13,9 @@ RUN npm run build
 
 FROM nginx
 
+# for elastic-beanstalk
+EXPOSE 80
+
 # to copy from other phase (builder in this case) we use the '--form'
 # copying to the default path of nginx to serve our app
 COPY --from=builder /app/build /usr/share/nginx/html
