@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          hi beoble ;0).
+          Hi this is me again, I am here to inform you that we are testing this v_secret feature. plz keep it a secret and don't tell othere. cya.
         </p>
         <a
           className="App-link"
