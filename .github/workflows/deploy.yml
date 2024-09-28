@@ -46,6 +46,6 @@ jobs:
           pip install awsebcli
 
           # Initialize EB and deploy
-          eb init my-app --platform docker --region ${{ secrets.AWS_REGION }}  # Replace `my-app` with your actual Elastic Beanstalk app name
+          eb init frontend --platform docker --region ${{ secrets.AWS_REGION }}  # Replace `my-app` with your actual Elastic Beanstalk app name
           eb use Frontend-env  # Replace `my-env` with your environment name
           eb deploy
