@@ -1,0 +1,13 @@
+sudo: required
+services:
+  - docker
+
+#before testing or deploying
+before_install:
+  - docker build -t beoboe/docker-react -f Dockerfile.dev .
+
+# to run tests
+script:
+# the -e CI=true is to ensure that the run command return anything not just sleeping there
+# we could append -- --coverage
+  - docker run -e CI=true beoboe/docker-react npm run test
