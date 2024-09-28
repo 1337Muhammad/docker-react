@@ -11,3 +11,13 @@ script:
 # the -e CI=true is to ensure that the run command return anything not just sleeping there
 # we could append -- --coverage
   - docker run -e CI=true beoboe/docker-react npm run test
+
+deploy:
+  provider: "elasticbeanstalk"
+  region: "eu-north-1"
+  app: "frontend"
+  env: "Frontend-env"
+  bucket_name: "elasticbeanstalk-eu-north-1-021660495013"
+  bucket_path: "frontend"
+  on:
+    branch: master
